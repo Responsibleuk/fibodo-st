@@ -320,3 +320,15 @@ setInterval(countdown,1000);
 
 
 
+
+// radio
+
+document.addEventListener("DOMContentLoaded", function() {
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener("change", function() {
+        var selectedOption = document.querySelector('input[name="option"]:checked').value;
+        window.location.href = selectedOption;
+      });
+    });
+  });
